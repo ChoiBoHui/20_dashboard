@@ -4,7 +4,7 @@
 
 :root { --bl:#2192f0; --gr:#89d223; --rd : #fc110e; --bg:#242530; --dark:#2f3243; --footerbox:#2a2c3b; --light:#353a4d; } 
 
-html { font-size: 10px;} 
+html { font-size: 10px; } 
 body { overflow-x: hidden; background: var(--bg); color: #fff; } 
 h2 { font-size: 18px; font-weight: 400; } 
 h3 { font-size: 16px; font-weight: 400; margin: auto 0; } 
@@ -61,7 +61,7 @@ h2.title::before { content: ""; position: absolute; top: 0; left: -10px; width: 
 .itm03 .midbox .error_state .state_details { margin: auto auto; } 
 
 .itm03 .midbox .error_list { height: 640px; overflow-y: auto; width: 100%; font-size: 14px; font-weight: 400; } 
-.itm03 .midbox .error_list .error_libox { display: flex; background: var(--light); border-radius: 4px; margin-bottom: 6px; box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05);} 
+.itm03 .midbox .error_list .error_libox { display: flex; background: var(--light); border-radius: 4px; margin-bottom: 6px; box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05); } 
 .itm03 .midbox .error_list .error_libox::before { content: ""; width: 4px; height: 60px; background: var(--bl); border-radius: 4px 0 0 4px; } 
 .itm03 .midbox .error_list .error_libox .area { width: 100px; margin: auto 0; } 
 .itm03 .midbox .error_list .error_libox .condition { width: 40px; margin: auto 0; } 
@@ -78,8 +78,10 @@ h2.title::before { content: ""; position: absolute; top: 0; left: -10px; width: 
 
 /* itm04 시작 */
 .itm04 .headerbox { height: 44px; } 
-.itm04 .midbox {height: 376px;}
-
+.itm04 .midbox { position: relative; height: 376px; } 
+.itm04 .midbox .chart_title { font-size: 14px; font-weight: 200; letter-spacing: 0.1rem; } 
+.itm04 .midbox .chart_title .title_y { position: absolute; top: 20px; left: 24px; } 
+.itm04 .midbox .chart_title .title_x { position: absolute; bottom: 20px; right: 20px; } 
 
 
 
