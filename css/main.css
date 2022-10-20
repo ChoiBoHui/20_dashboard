@@ -1,0 +1,86 @@
+/* * { background: rgba(255, 255, 255, 0.3); } */
+/* * { outline: 1px solid #f00; } */
+/* --bg:#242530; */
+
+:root { --bl:#2192f0; --gr:#89d223; --rd : #fc110e; --bg:#242530; --dark:#2f3243; --footerbox:#2a2c3b; --light:#353a4d; } 
+
+html { font-size: 10px;} 
+body { overflow-x: hidden; background: var(--bg); color: #fff; } 
+h2 { font-size: 18px; font-weight: 400; } 
+h3 { font-size: 16px; font-weight: 400; margin: auto 0; } 
+/* .Wrap { } */
+.container { max-width: 1200px; margin: 0 auto; } 
+.titbox { background: var(--light); border-radius: 4px; padding: 10px 20px; vertical-align: middle; } 
+.contentsbox { position: relative; } 
+.headerbox { width: 100%; background: var(--light); border-radius: 4px 4px 0 0; padding: 10px 20px; vertical-align: middle; margin-bottom: 2px; } 
+.midbox { background: var(--dark); padding: 10px 20px; } 
+.footerbox { width: 100%; background: var(--footerbox); border-radius: 0 0 4px 4px; padding: 10px 20px; vertical-align: middle; margin-top: 2px; } 
+/* !------------------ 이 위로 공통 적용 style ------------------! */
+
+
+/* !------------------ 헤더 시작 ------------------! */
+.header { position: relative; display: flex; padding: 20px; font-size: 13px; margin-bottom: 20px; } 
+.date { font-weight: 300; } 
+.logo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.05rem; } 
+.gnb { margin: auto 0 auto auto; font-weight: 300; } 
+.gnb ul { display: flex; } 
+.gnb li a { padding:10px; } 
+.gnb li:last-child a { padding-right: 0; } 
+.gnb li~li a::before { content: ""; display: inline-block; background: #fff; width: 1px; height: 8px; top: 0; left: 0; transform: translateX(-10px); } 
+/* !------------------ 헤더 끝 ------------------! */
+
+/* !------------------ 메인 시작 ------------------! */
+h2.title { position: relative; margin: 0 auto 20px 10px; } 
+h2.title::before { content: ""; position: absolute; top: 0; left: -10px; width: 2px; height: 18px; background: var(--bl); } 
+/* 서치바(검색) 시작 */
+.search_bar { display: flex; margin-bottom: 10px; } 
+/* .search_bar h3 { padding-right: 20px; } */
+.search_bar select { font-size: 14px; font-weight: 400; border: none; border-radius: 2px; margin: auto auto auto 20px; width: 120px; height: 30px; cursor: pointer; } 
+.search_bar .search_btn { background: var(--bl); color: #fff; border: none; outline: none; font-size: 14px; font-weight: 400; border-radius: 2px; width: 80px; height: 30px; margin: auto 0 auto auto; cursor: pointer; } 
+
+.grid_container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; } 
+.grid_container .contentsbox { min-height: 300px; } 
+.grid_container .headerbox { display: flex; justify-content: space-between; } 
+.grid_container .cumulative { display: flex; } 
+.grid_container .numbox { display: flex; font-size: 14px; font-weight: 200; align-items: flex-end; letter-spacing: 0.075rem; color: rgba(255, 255, 255, 0.85); } 
+.grid_container .numbox .num { font-size: 24px; font-weight: 300; margin-right: 10px; transform: translateY(2px); } 
+.grid_container .current .num { color: var(--bl); } 
+.grid_container .cumulative .num { color: var(--gr); } 
+.grid_container .footerbox { display: flex; justify-content: space-between; } 
+.grid_container .footerbox .tit { font-size: 16px; font-weight: 300; margin: auto 0; } 
+.grid_container .footerbox .num { font-size: 22px; font-weight: 300; } 
+.itm03 .headerbox { height: 44px; } 
+.itm03 .midbox, .itm04 .midbox { border-radius: 0 0 4px 4px; background: var(--dark); } 
+.itm03 { grid-column: 3/4; grid-row: 1/3; text-align: center; } 
+.itm04 { grid-column: 1/3; grid-row: 2/3; } 
+.error_m { color: var(--rd); } 
+
+.itm03 .midbox .error_state { display: flex; font-size: 16px; font-weight: 400; margin-bottom: 10px; } 
+.itm03 .midbox .error_state .state_area { width: 100px; margin: auto 0; padding-left: 4px; } 
+.itm03 .midbox .error_state .error_m { width: 40px; margin: auto 0; } 
+.itm03 .midbox .error_state .state_details { margin: auto auto; } 
+
+.itm03 .midbox .error_list { height: 640px; overflow-y: auto; width: 100%; font-size: 14px; font-weight: 400; } 
+.itm03 .midbox .error_list .error_libox { display: flex; background: var(--light); border-radius: 4px; margin-bottom: 6px; box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05);} 
+.itm03 .midbox .error_list .error_libox::before { content: ""; width: 4px; height: 60px; background: var(--bl); border-radius: 4px 0 0 4px; } 
+.itm03 .midbox .error_list .error_libox .area { width: 100px; margin: auto 0; } 
+.itm03 .midbox .error_list .error_libox .condition { width: 40px; margin: auto 0; } 
+.itm03 .midbox .error_list .error_libox .details { margin: auto auto; } 
+.itm03 .midbox .error_list .error_libox .error_date { font-weight: 300; margin-top: 4px; } 
+
+/* 스크롤바 스타일 시작! */
+.error_list { width: 250px; height: 140px; overflow: auto; } 
+.error_list::-webkit-scrollbar { width: 6px; } 
+.error_list::-webkit-scrollbar-thumb { background-color: var(--bl); border-radius: 6px; border: 1px solid var(--bl); } 
+.error_list::-webkit-scrollbar-track { background-color: var(--light); border-radius: 6px; border: 1px solid var(--bl); } 
+/* 스크롤바 스타일 끝!! */
+
+
+/* itm04 시작 */
+.itm04 .headerbox { height: 44px; } 
+.itm04 .midbox {height: 376px;}
+
+
+
+
+/* !------------------ 메인 끝 ------------------! */

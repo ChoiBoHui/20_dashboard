@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대글로벌 대쉬보드 연습</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/chart.js"></script>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header class="header">
+            <div class="date"></div>
+            <div class="logo"><a href="/">통합관제센터</a></div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#!">통합관제</a></li>
+                    <li><a href="#!">단일발전소관제</a></li>
+                    <li><a href="#!">발전량</a></li>
+                    <li><a href="#!">이벤트</a></li>
+                    <li><a href="#!">설정</a></li>
+                    <li><a href="#!">CCTV관제센터</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="container">
+                <h2 class="title">단일 발전소 관제</h2>
+                <div class="search_bar titbox">
+                    <h3>발전소</h3>
+                    <select name="" id="station_local">
+                        <option value="01">구례발전소</option>
+                        <option value="02">남해발전소</option>
+                        <option value="03">목포발전소</option>
+                        <option value="04">양산발전소</option>
+                    </select>
+                    <button class="search_btn">검색</button>
+                </div>
+                <div class="grid_container">
+                    <div class="itm itm01">
+                        <div class="contentsbox">
+                            <div class="headerbox">
+                                <h3>현재발전전력</h3>
+                                <div class="current numbox">
+                                    <div class="num">651.3</div>
+                                    kW
+                                </div>
+                            </div>
+                            <div class="midbox">
+                                <div class="cumulative_graph">
+                                    여기 그래프 들어감
+                                </div>
+                            </div>
+                            <div class="footerbox">
+                                <div class="tit">발전 효율</div>
+                                <div class="numbox">
+                                    <div class="num">96.7</div>
+                                    %
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm itm02">
+                        <div class="contentsbox">
+                            <div class="headerbox">
+                                <h3>당일누적발전량</h3>
+                                <div class="cumulative numbox">
+                                    <div class="num">1,019.1</div>
+                                    kWh
+                                </div>
+                            </div>
+                            <div class="midbox">
+                                <div class="cumulative_graph">
+                                    여기 그래프 들어감
+                                </div>
+                            </div>
+                            <div class="footerbox">
+                                <div class="tit">발전 시간</div>
+                                <div class="numbox">
+                                    <div class="num">1.0</div>
+                                    hour
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm itm03">
+                        <div class="contentsbox">
+                            <div class="headerbox numbox">
+                                <h3>장애현황</h3>
+                            </div>
+                            <div class="midbox">
+                                <ul class="error_state">
+                                    <li class="state_area">발전소</li>
+                                    <li class="error_m">정상</li>
+                                    <li class="state_details">장애내역</li>
+                                </ul>
+                                <ul class="error_list">
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">구례발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">목포발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">목포발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">양산발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">양산발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="error_libox">
+                                        <div class="area">남해발전소</div>
+                                        <div class="condition error_m">X</div>
+                                        <div class="details">
+                                            <div class="error_name">
+                                                GRID UNDER BOLTAGE LEVEL1
+                                            </div>
+                                            <div class="error_date">
+                                                2022-11-05 16:25:50
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itm itm04">
+                        <div class="contentsbox">
+                            <div class="headerbox">
+                                <h3>발전량</h3>
+                                <div class="quantity numbox"></div>
+                            </div>
+                            <div class="midbox">
+                                <div>
+                                    <canvas id="myChart"
+                                        style="position: relative; height:330px;  transform: translateY(20px); "></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>
