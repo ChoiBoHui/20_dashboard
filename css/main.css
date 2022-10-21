@@ -51,6 +51,21 @@ h2.title::before { content: ""; position: absolute; top: 0; left: -10px; width: 
 .grid_container .footerbox { display: flex; justify-content: space-between; } 
 .grid_container .footerbox .tit { font-size: 16px; font-weight: 300; margin: auto 0; } 
 .grid_container .footerbox .num { font-size: 22px; font-weight: 300; } 
+
+.itm01 .midbox { position: relative; height: 210px; overflow: hidden; } 
+.itm01 .midbox .textfield { position: absolute; bottom: 29px; left: 50%; transform: translateX(-59%); font-size: 30px; font-weight: 500; font-style: italic; color: var(--bl); z-index: 1; } 
+
+/* .itm01 .cumulative_graph { overflow: hidden; } */
+/* .itm01 .cumulative_graph::before { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background: var(--dark); width: 120px; height: 27px; z-index: 1; } 
+.itm01 .cumulative_graph::after { content: ""; position: absolute; bottom: 30px; left: 50%; transform: translate(-50%, 50%); background: radial-gradient(var(--light), var(--bl)); border-radius: 50%; width: 100px; height: 100px; opacity: 0.3; } */
+
+.itm01 .cumulative_graph::before { content: ""; position: absolute; bottom: 27px; left: 50%; transform: translateX(-50%); border-top: 1px solid var(--bl); border-radius: 45px 45px 0 0; width: 90px; height: 45px;} 
+.itm01 .cumulative_graph::after { content: ""; position: absolute; bottom: 27px; left: 50%; transform: translateX(-50%); background: radial-gradient(farthest-corner at 50% 100%, var(--dark) 0%,var(--dark) 50%, var(--bl) 100%); border-radius: 45px 45px 0 0; width: 90px; height: 45px; opacity: 0.5; } 
+
+
+.itm01 .midbox .gauge01 { padding: 20px 10px 0 10px; } 
+
+
 .itm03 .headerbox { height: 44px; } 
 .itm03 .midbox, .itm04 .midbox { border-radius: 0 0 4px 4px; background: var(--dark); } 
 .itm03 { grid-column: 3/4; grid-row: 1/3; text-align: center; } 

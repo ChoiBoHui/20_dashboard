@@ -10,10 +10,8 @@
 </head>
 
 <body>
-
-    <canvas id="foo"></canvas>
-    <br />
-    <div style="margin-left:120px"><span id="foo_txt">0</span>%</div>
+    <div id="textfield" style="font-size: 41px;">1000</div>
+    <canvas id="gauge01"></canvas>
 
 
     <script>
@@ -36,32 +34,34 @@
                 highDpiSupport: true,     // High resolution support
                 // renderTicks is Optional
                 renderTicks: {
-                    divisions: 10,
-                    divWidth: 1,
-                    divLength: 0.52,
-                    divColor: '#f00',
-                    // subDivisions: 0,
-                    // subLength: 0.56,
-                    // subWidth: 1.6,
-                    // subColor: '#666666'
+                    divisions: 1,
+                    divWidth: 0.1,
+                    divLength: 1,
+                    divColor: '#fff',
+                    subDivisions: 10,
+                    subLength: 0.2,
+                    subWidth: 0.7,
+                    subColor: '#fff'
                 },
                 staticLabels: {
-                    font: "10px sans-serif",  // Specifies font
+                    font: "12px sans-serif",  // Specifies font
                     labels: [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],  // Print labels at these values
                     color: "#f00",  // Optional: Label text color
                     fractionDigits: 0  // Optional: Numerical precision. 0=round off.
                 },
 
-
             };
-            var target = document.getElementById('foo'); // your canvas element
+            var target = document.getElementById('gauge01'); // your canvas element
             var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
             gauge.maxValue = 1000; // set max gauge value
             gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
             gauge.animationSpeed = 40; // set animation speed (32 is default value)
             gauge.set(650); // set actual value
-
-
+            // gauge.set(값)을 받아와서 textfield에 value로 주고, html에 보이게 해야함!
+            let textfield = document.querySelector('#textfield');
+            // textfield.value = gauge.set.value;
+            console.log(gauge);
+            // 모르겠다 :),.,...
 
         });
     </script>
