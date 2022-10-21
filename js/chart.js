@@ -160,6 +160,8 @@ window.addEventListener('DOMContentLoaded', () => {
         type: 'bar',
         data: data,
         options: {
+            maxBarThickness: '16',
+            // 막대 최대 굵기 지정으로 링크에 다른 옵션도 있음 : https://www.chartjs.org/docs/latest/charts/bar.html#maxbarthickness
             interaction: {
                 mode: 'index'
             },

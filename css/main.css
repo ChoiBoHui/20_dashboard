@@ -9,7 +9,9 @@ body { overflow-x: hidden; background: var(--bg); color: #fff; }
 h2 { font-size: 18px; font-weight: 400; } 
 h3 { font-size: 16px; font-weight: 400; margin: auto 0; } 
 /* .Wrap { } */
-.container { max-width: 1200px; margin: 0 auto; } 
+.container { width: 1200px; margin: 0 auto; } 
+/* .container { max-width: 1200px; margin: 0 auto; } */
+/* 반응형일때는 max-width: 1200px; 로 들어가야한다. */
 .titbox { background: var(--light); border-radius: 4px; padding: 10px 20px; vertical-align: middle; } 
 .contentsbox { position: relative; } 
 .headerbox { width: 100%; background: var(--light); border-radius: 4px 4px 0 0; padding: 10px 20px; vertical-align: middle; margin-bottom: 2px; } 
@@ -79,9 +81,10 @@ h2.title::before { content: ""; position: absolute; top: 0; left: -10px; width: 
 /* itm04 시작 */
 .itm04 .headerbox { height: 44px; } 
 .itm04 .midbox { position: relative; height: 376px; } 
+.itm04 .midbox .chart_bar { width: 724px; } 
 .itm04 .midbox .chart_title { font-size: 14px; font-weight: 200; letter-spacing: 0.1rem; } 
 .itm04 .midbox .chart_title .title_y { position: absolute; top: 20px; left: 24px; } 
-.itm04 .midbox .chart_title .title_x { position: absolute; bottom: 20px; right: 20px; } 
+.itm04 .midbox .chart_title .title_x { position: absolute; bottom: 25px; right: 20px; } 
 
 
 
